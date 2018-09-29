@@ -14,18 +14,53 @@ export default class Weather extends React.Component {
     render() {
         return (
         <View style={styles.container}>
+        
         <ImageBackground source={require('../bg.jpg')} style={styles.backdrop}>
-        <Text>Zip code is {this.props.zipCode}.</Text>
+        
+        
+        <View style={styles.layout }>
        
-        <Forecast {...this.state.forecast} />
-        </ImageBackground>
+         <Text    style={styles.red } > Zip code is {this.props.zipCode}.</Text>
+         <Forecast {...this.state.forecast} />
         </View>
+        </ImageBackground>
        
+      
+       
+      </View>
+
         );
         }
        }
    const styles = StyleSheet.create({
-    container: { paddingTop: 25 },
-    backdrop: { width: '100%', height: '100%'},
+    container: { 
+        paddingTop: 25, 
+        paddingRight: 25,
+        paddingLeft: 25,
+        
+        
+     },
+     layout: {
+      
+        flexDirection:'row',
+       
+        justifyContent:'space-between',
+        height: 300,  opacity: 0.4, 
+        backgroundColor: 'black',
+        
+      
+     },
+    red : {
+      
+       
+        color: 'white',
+        textAlign: 'center',
+        fontSize: 30,
+        
+    },
+    backdrop: { width: '100%', 
+    height: '100%',
+  
+   },
    });
    
