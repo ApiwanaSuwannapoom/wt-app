@@ -16,9 +16,11 @@ export default class Weather extends React.Component {
         <View style={styles.container}>
         <ImageBackground source={require('../bg.jpg')} style={styles.backdrop}>
         <Text>Zip code is {this.props.zipCode}.</Text>
+       
         <Forecast {...this.state.forecast} />
         </ImageBackground>
         </View>
+       
         );
         }
        }
