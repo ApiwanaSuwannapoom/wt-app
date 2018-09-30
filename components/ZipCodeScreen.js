@@ -8,7 +8,7 @@ import { StyleSheet, FlatList, View, Text,TouchableHighlight } from 'react-nativ
     { place: 'Chonburi', code: '20000' },
    ]
 const ZipItem = ({place, code, navigate}) => (
-    <TouchableHighlight onPress={() => navigate('Weather',{ZipCode: code})}>
+    <TouchableHighlight onPress={() => navigate('Weather',{zipCode: code})}>
     <View style={styles.zipItem}>
       <Text style={styles.zipPlace}>{place}</Text>
       <Text style={styles.zipCode}>{code}</Text>
