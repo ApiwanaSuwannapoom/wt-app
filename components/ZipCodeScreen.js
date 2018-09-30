@@ -8,10 +8,12 @@ import { StyleSheet, FlatList, View, Text,TouchableHighlight } from 'react-nativ
     { place: 'Chonburi', code: '20000' },
    ]
 const ZipItem = ({place, code, navigate}) => (
+    <TouchableHighlight onPress={() => navigate('Weather',{ZipCode: code})}>
     <View style={styles.zipItem}>
       <Text style={styles.zipPlace}>{place}</Text>
       <Text style={styles.zipCode}>{code}</Text>
     </View>
+    </TouchableHighlight>
 )
 const _keyExtractor = item => item.code
  export default class ZipCodeScreen extends React.Component {
